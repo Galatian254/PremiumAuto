@@ -1,0 +1,2095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Auto - Luxury Car Dealership | Drive Your Dream</title>
+    <meta name="description" content="Premium Auto - Your trusted luxury car dealership with 25+ years of excellence. Browse our premium vehicles, schedule test drives, and experience exceptional service.">
+    <meta name="keywords" content="luxury cars, car dealership, premium vehicles, test drive, auto sales">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Modern CSS Reset and Variables */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #e74c3c;
+            --accent: #3498db;
+            --text: #2c3e50;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* Enhanced Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Modern Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(44, 62, 80, 0.9), rgba(231, 76, 60, 0.8)), url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="%23ffffff" opacity="0.1"><polygon points="1000,100 1000,0 0,100"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        /* Modern Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2.5rem;
+            background: var(--secondary);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(231, 76, 60, 0.4);
+            background: #c0392b;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid white;
+            box-shadow: none;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        /* Enhanced Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+        }
+
+        .container-sm {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Enhanced Vehicle Cards */
+        .vehicles-grid, .featured-cars {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 2rem;
+        }
+
+        .vehicle-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .vehicle-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .vehicle-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .vehicle-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .vehicle-info {
+            padding: 2rem;
+        }
+
+        .vehicle-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .vehicle-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .vehicle-features {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .vehicle-features span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Enhanced Search & Filters */
+        .search-filters {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-bottom: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            align-items: end;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .filter-group label {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .filter-group input,
+        .filter-group select {
+            padding: 0.8rem 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .filter-group input:focus,
+        .filter-group select:focus {
+            border-color: var(--accent);
+            outline: none;
+        }
+
+        /* Enhanced Gallery */
+        .gallery-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 2rem;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Enhanced Forms */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+
+        /* Enhanced Footer */
+        .footer {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-section a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: var(--transition);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease;
+        }
+
+        /* Promotional Banner */
+        .promo-banner {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+            z-index: 1001;
+        }
+
+        .promo-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .promo-content h3 {
+            margin: 0;
+            font-size: 1.3rem;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            background: white;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Timeline */
+        .heritage-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 2rem;
+            align-items: flex-start;
+        }
+
+        .timeline-year {
+            background: var(--secondary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-right: 2rem;
+            min-width: 80px;
+        }
+
+        /* Milestones */
+        .journey-milestones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .milestone {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .milestone img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+
+        /* Updates Section */
+        .updates-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .update-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+        }
+
+        .update-date {
+            color: #666;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            display: block;
+        }
+
+        /* Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary);
+            transition: var(--transition);
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 2rem;
+            background: var(--secondary);
+            color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transform: translateX(150%);
+            transition: transform 0.3s ease;
+            z-index: 2000;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        /* Payment Methods */
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .payment-method {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .payment-method:hover {
+            transform: translateY(-5px);
+        }
+
+        .payment-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .payment-method.active {
+            border: 2px solid var(--secondary);
+        }
+
+        .payment-details {
+            display: none;
+            margin-top: 2rem;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .payment-details.active {
+            display: block;
+        }
+
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .chatbot-button {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transition: var(--transition);
+        }
+
+        .chatbot-button:hover {
+            transform: scale(1.1);
+        }
+
+        .chatbot-button-icon {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .chatbot-window {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chatbot-window.active {
+            display: flex;
+        }
+
+        .chatbot-header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 0.8rem 1rem;
+            border-radius: 15px;
+            line-height: 1.4;
+        }
+
+        .message.bot {
+            background: #f1f1f1;
+            align-self: flex-start;
+            border-bottom-left-radius: 5px;
+        }
+
+        .message.user {
+            background: var(--accent);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 5px;
+        }
+
+        .chatbot-input {
+            padding: 1rem;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chatbot-input input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            outline: none;
+        }
+
+        .chatbot-input button {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quick-questions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .quick-question {
+            background: #e9ecef;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .quick-question:hover {
+            background: #dee2e6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 4rem 1.5rem;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Navigation */
+            .nav-container {
+                padding: 0 1rem;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: white;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 2rem;
+                transition: var(--transition);
+                box-shadow: var(--shadow);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+            
+            /* Hero Section */
+            .hero {
+                height: 70vh;
+                background-attachment: scroll;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            /* Sections */
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+            
+            .vehicles-grid,
+            .featured-cars {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .search-filters {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            /* Gallery */
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            
+            /* Updates Section */
+            .updates-section {
+                grid-template-columns: 1fr;
+            }
+            
+            /* Footer */
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            /* Chatbot */
+            .chatbot-window {
+                width: 300px;
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+            
+            .container {
+                padding: 3rem 1rem;
+            }
+            
+            .vehicle-features {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .promo-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .chatbot-window {
+                width: 280px;
+                right: -20px;
+            }
+        }
+
+        /* Touch Device Optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .vehicle-card:hover {
+                transform: none;
+            }
+            
+            .gallery-item:hover img {
+                transform: none;
+            }
+            
+            .btn:hover {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Promotional Banner -->
+    <div class="promo-banner" id="promoBanner">
+        <div class="promo-content">
+            <h3>Year-End Clearance</h3>
+            <p>Save up to 20% on select models</p>
+            <button class="btn">Shop Now</button>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Premium<span>Auto</span></a>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#vehicles">Vehicles</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#heritage">Heritage</a></li>
+                <li><a href="#journey">Our Journey</a></li>
+                <li><a href="#updates">Updates</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Drive Your Dream</h1>
+            <p>Discover the perfect luxury vehicle for your lifestyle at Premium Auto</p>
+            <div class="hero-buttons">
+                <a href="#vehicles" class="btn">Browse Inventory</a>
+                <a href="#updates" class="btn btn-outline">Schedule Test Drive</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="section-header">
+            <h2>Featured Vehicles</h2>
+            <p>Explore our handpicked selection of premium automobiles</p>
+        </div>
+        <div class="featured-cars" id="featuredVehicles">
+            <!-- Featured vehicles loaded by JavaScript -->
+        </div>
+    </section>
+
+    <section class="container-sm">
+        <div class="section-header">
+            <h2>Why Choose Premium Auto?</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🚗</div>
+                <h3>Premium Selection</h3>
+                <p>Curated collection of luxury and premium vehicles from top brands</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3>Best Financing</h3>
+                <p>Competitive rates and flexible payment options for all buyers</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Expert Service</h3>
+                <p>25+ years of experience in luxury vehicle sales and service</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicles Section -->
+    <section id="vehicles" class="container">
+        <div class="section-header">
+            <h2>Our Vehicle Inventory</h2>
+            <p>Find your perfect luxury vehicle from our extensive collection</p>
+        </div>
+        
+        <div class="search-filters">
+            <div class="filter-group">
+                <label for="search">Search</label>
+                <input type="text" id="search" placeholder="Search vehicles...">
+            </div>
+            <div class="filter-group">
+                <label for="price-filter">Price Range</label>
+                <select id="price-filter">
+                    <option value="">Any Price</option>
+                    <option value="0-25000">Under $25,000</option>
+                    <option value="25000-50000">$25,000 - $50,000</option>
+                    <option value="50000+">Over $50,000</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="type-filter">Vehicle Type</label>
+                <select id="type-filter">
+                    <option value="">All Types</option>
+                    <option value="sedan">Sedan</option>
+                    <option value="suv">SUV</option>
+                    <option value="sports">Sports</option>
+                    <option value="luxury">Luxury</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="vehicles-grid" id="vehiclesContainer">
+            <!-- Vehicles will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="container">
+        <div class="section-header">
+            <h2>Gallery</h2>
+            <p>Explore our stunning collection of luxury vehicles</p>
+        </div>
+        
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="luxury">Luxury</button>
+            <button class="filter-btn" data-filter="suv">SUV</button>
+            <button class="filter-btn" data-filter="sports">Sports</button>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item luxury">
+                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Luxury Sedan">
+            </div>
+            <div class="gallery-item suv">
+                <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Premium SUV">
+            </div>
+            <div class="gallery-item sports">
+                <img src="https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Sports Car">
+            </div>
+            <div class="gallery-item luxury">
+                <img src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Luxury Interior">
+            </div>
+            <div class="gallery-item suv">
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="SUV Interior">
+            </div>
+            <div class="gallery-item sports">
+                <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2025&q=80" alt="Sports Car Interior">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="container">
+        <div class="section-header">
+            <h2>About Premium Auto</h2>
+            <p>Learn about our journey and commitment to excellence</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Our Story</h2>
+                <p>For over 25 years, Premium Auto has been serving the community with quality vehicles and exceptional customer service. What started as a small family-owned dealership has grown into one of the region's most trusted names in luxury automotive sales.</p>
+                
+                <h2>Our Mission</h2>
+                <p>To provide every customer with their dream vehicle while ensuring a seamless and enjoyable car-buying experience. We believe that purchasing a luxury vehicle should be as premium as the vehicle itself.</p>
+                
+                <h2>Our Team</h2>
+                <p>Our experienced professionals are dedicated to helping you find the perfect vehicle that matches your needs and budget. From our sales consultants to our financing specialists, every team member shares our commitment to excellence.</p>
+            </div>
+            
+            <div class="about-stats" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem;">
+                <div class="stat" style="text-align: center;">
+                    <h3 style="font-size: 2.5rem; color: var(--secondary);">25+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat" style="text-align: center;">
+                    <h3 style="font-size: 2.5rem; color: var(--secondary);">10,000+</h3>
+                    <p>Vehicles Sold</p>
+                </div>
+                <div class="stat" style="text-align: center;">
+                    <h3 style="font-size: 2.5rem; color: var(--secondary);">98%</h3>
+                    <p>Customer Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Heritage Section -->
+    <section id="heritage" class="container">
+        <div class="section-header">
+            <h2>Our Heritage</h2>
+            <p>A legacy of excellence in automotive sales and service</p>
+        </div>
+        
+        <div class="heritage-timeline">
+            <div class="timeline-item">
+                <div class="timeline-year">1998</div>
+                <div class="timeline-content">
+                    <h3>Humble Beginnings</h3>
+                    <p>Founded as a small family-owned dealership with just 10 vehicles and a commitment to customer service above all else.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2005</div>
+                <div class="timeline-content">
+                    <h3>First Expansion</h3>
+                    <p>Opened our second location and expanded inventory to 100+ vehicles, establishing ourselves as a regional leader.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2015</div>
+                <div class="timeline-content">
+                    <h3>Digital Transformation</h3>
+                    <p>Launched our online platform and virtual showroom, making luxury vehicles accessible to customers nationwide.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-year">2023</div>
+                <div class="timeline-content">
+                    <h3>Present Day</h3>
+                    <p>Serving thousands of customers with 500+ vehicles in inventory across three premium locations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Journey Section -->
+    <section id="journey" class="container">
+        <div class="section-header">
+            <h2>Our Journey</h2>
+            <p>Key milestones in our growth and development</p>
+        </div>
+        
+        <div class="journey-milestones">
+            <div class="milestone">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80" alt="First Location">
+                <h3>Our First Location</h3>
+                <p>The beginning of our incredible journey in the automotive industry with a small showroom and big dreams.</p>
+            </div>
+            
+            <div class="milestone">
+                <img src="Award_Winning_Service.webp" alt="Award Winning">
+                <h3>Award Winning Service</h3>
+                <p>Recognized for excellence in customer service and satisfaction with multiple industry awards.</p>
+            </div>
+            
+            <div class="milestone">
+                <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Community">
+                <h3>Community Partnership</h3>
+                <p>Growing together with our local community through sponsorships, events, and charitable initiatives.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updates Section with Payment Methods -->
+    <section id="updates" class="container">
+        <div class="section-header">
+            <h2>Latest Updates & Reservations</h2>
+            <p>Stay informed and reserve your dream vehicle today</p>
+        </div>
+        
+        <div class="updates-section">
+            <div class="news-updates">
+                <h2>News & Updates</h2>
+                <div class="update-item">
+                    <h3>New Electric Vehicles Arriving Soon!</h3>
+                    <p>We're excited to announce our new lineup of electric vehicles coming next month. Experience the future of luxury driving with zero emissions.</p>
+                    <span class="update-date">Posted: December 1, 2024</span>
+                </div>
+                
+                <div class="update-item">
+                    <h3>Winter Maintenance Special</h3>
+                    <p>Get your vehicle winter-ready with our exclusive maintenance package. Includes tire rotation, fluid check, and comprehensive inspection.</p>
+                    <span class="update-date">Posted: November 25, 2024</span>
+                </div>
+
+                <div class="update-item">
+                    <h3>Holiday Financing Event</h3>
+                    <p>Take advantage of our special holiday financing rates with terms up to 72 months. Limited time offer - apply today!</p>
+                    <span class="update-date">Posted: November 20, 2024</span>
+                </div>
+            </div>
+            
+            <div class="reservation-form">
+                <h2>Reserve Your Vehicle</h2>
+                <form id="reservationForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Phone" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="vehicleType" required>
+                            <option value="">Select Vehicle Interest</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="suv">SUV</option>
+                            <option value="sports">Sports Car</option>
+                            <option value="luxury">Luxury Vehicle</option>
+                            <option value="electric">Electric Vehicle</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="notes" placeholder="Additional Notes"></textarea>
+                    </div>
+                    
+                    <!-- Payment Methods Section -->
+                    <div class="form-group">
+                        <h3>Select Payment Method</h3>
+                        <div class="payment-methods">
+                            <div class="payment-method" data-method="mpesa">
+                                <div class="payment-icon">📱</div>
+                                <h4>M-Pesa</h4>
+                                <p>Mobile Money Payment</p>
+                            </div>
+                            <div class="payment-method" data-method="airtel">
+                                <div class="payment-icon">💳</div>
+                                <h4>Airtel Money</h4>
+                                <p>Mobile Money Payment</p>
+                            </div>
+                            <div class="payment-method" data-method="bank">
+                                <div class="payment-icon">🏦</div>
+                                <h4>Bank Transfer</h4>
+                                <p>Direct Bank Payment</p>
+                            </div>
+                        </div>
+                        
+                        <!-- M-Pesa Payment Details -->
+                        <div class="payment-details" id="mpesa-details">
+                            <h4>M-Pesa Payment Instructions</h4>
+                            <p>1. Go to M-Pesa on your phone</p>
+                            <p>2. Select "Lipa Na M-Pesa"</p>
+                            <p>3. Enter Business Number: <strong>123456</strong></p>
+                            <p>4. Enter Amount: <strong id="mpesa-amount">$0.00</strong></p>
+                            <p>5. Enter your M-Pesa PIN</p>
+                            <div class="form-group">
+                                <input type="text" placeholder="M-Pesa Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Transaction Code" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Airtel Money Payment Details -->
+                        <div class="payment-details" id="airtel-details">
+                            <h4>Airtel Money Payment Instructions</h4>
+                            <p>1. Go to Airtel Money on your phone</p>
+                            <p>2. Select "Make Payment"</p>
+                            <p>3. Enter Merchant Code: <strong>987654</strong></p>
+                            <p>4. Enter Amount: <strong id="airtel-amount">$0.00</strong></p>
+                            <p>5. Enter your Airtel Money PIN</p>
+                            <div class="form-group">
+                                <input type="text" placeholder="Airtel Money Phone Number" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Transaction Code" required>
+                            </div>
+                        </div>
+                        
+                        <!-- Bank Transfer Payment Details -->
+                        <div class="payment-details" id="bank-details">
+                            <h4>Bank Transfer Details</h4>
+                            <p><strong>Bank Name:</strong> Premium Auto Bank</p>
+                            <p><strong>Account Name:</strong> Premium Auto Ltd</p>
+                            <p><strong>Account Number:</strong> 1234567890</p>
+                            <p><strong>Branch Code:</strong> 12345</p>
+                            <p><strong>Swift Code:</strong> PREMAUTO</p>
+                            <div class="form-group">
+                                <input type="text" placeholder="Reference Number" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="date" placeholder="Transfer Date" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn">Complete Reservation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Premium Auto</h3>
+                    <p>Your trusted partner for luxury vehicles since 1998.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#vehicles">Inventory</a>
+                    <a href="#about">About Us</a>
+                    <a href="#updates">Reservations</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📞 (555) 123-4567</p>
+                    <p>✉️ info@premiumauto.com</p>
+                    <p>📍 123 Luxury Lane, Premium City</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p>&copy; 2025 Premium Auto. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Customer Care Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-button" id="chatbotButton">
+            <i class="fas fa-comments chatbot-button-icon"></i>
+        </div>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <h3>Premium Auto Support</h3>
+                <span class="close-modal" id="closeChatbot"><i class="fas fa-times"></i></span>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="message bot">
+                    Hello! I'm your Premium Auto assistant. How can I help you today?
+                </div>
+                <div class="quick-questions">
+                    <button class="quick-question" data-question="vehicle-pricing">Vehicle Pricing</button>
+                    <button class="quick-question" data-question="test-drive">Schedule Test Drive</button>
+                    <button class="quick-question" data-question="financing">Financing Options</button>
+                    <button class="quick-question" data-question="service">Service & Maintenance</button>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Type your message...">
+                <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Vehicle data
+        const vehicles = [
+            {
+                id: 1,
+                name: "Premium Sedan X",
+                price: 45000,
+                type: "sedan",
+                image: "https://images.unsplash.com/photo-1555215695-3004980ad54e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+                description: "Luxury sedan with premium features",
+                features: ["Leather Seats", "Sunroof", "Navigation"]
+            },
+            {
+                id: 2,
+                name: "Adventure SUV Pro",
+                price: 55000,
+                type: "suv",
+                image: "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+                description: "Spacious SUV for family adventures",
+                features: ["4WD", "Third Row", "Towing Package"]
+            },
+            {
+                id: 3,
+                name: "Sports Coupe GT",
+                price: 68000,
+                type: "sports",
+                image: "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
+                description: "High-performance sports car",
+                features: ["Turbo Engine", "Sport Suspension", "Premium Sound"]
+            },
+            {
+                id: 4,
+                name: "Luxury Sedan Elite",
+                price: 75000,
+                type: "luxury",
+                image: "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+                description: "Ultimate luxury and comfort",
+                features: ["Massage Seats", "Premium Audio", "Heated Steering"]
+            },
+            {
+                id: 5,
+                name: "Family SUV XL",
+                price: 42000,
+                type: "suv",
+                image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+                description: "Perfect for growing families",
+                features: ["Spacious Interior", "Safety Features", "Fuel Efficient"]
+            },
+            {
+                id: 6,
+                name: "Roadster Sport",
+                price: 82000,
+                type: "sports",
+                image: "https://images.unsplash.com/photo-1553440569-bcc63803a83d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2025&q=80",
+                description: "Convertible sports car for the open road",
+                features: ["Convertible Top", "Premium Interior", "High Performance"]
+            }
+        ];
+
+        // Modern JavaScript with SEO optimization and enhanced functionality
+        class PremiumAutoDealership {
+            constructor() {
+                this.init();
+            }
+
+            init() {
+                this.setupNavigation();
+                this.setupAnimations();
+                this.setupFilters();
+                this.setupReservationSystem();
+                this.setupPaymentMethods();
+                this.setupChatbot();
+                this.setupSEO();
+                this.setupPromotionalBanners();
+                this.loadFeaturedVehicles();
+                this.loadAllVehicles();
+            }
+
+            // Enhanced Navigation
+            setupNavigation() {
+                const navbar = document.querySelector('.navbar');
+                const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+                const navLinks = document.querySelector('.nav-links');
+
+                // Scroll effect
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 100) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                });
+
+                // Mobile menu
+                if (mobileMenuBtn) {
+                    mobileMenuBtn.addEventListener('click', () => {
+                        navLinks.classList.toggle('active');
+                        mobileMenuBtn.classList.toggle('active');
+                    });
+                }
+
+                // Close mobile menu on link click
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        mobileMenuBtn.classList.remove('active');
+                    });
+                });
+
+                // Smooth scrolling for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            window.scrollTo({
+                                top: target.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            }
+
+            // Advanced Animations
+            setupAnimations() {
+                // Intersection Observer for scroll animations
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('fade-in');
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe all sections
+                document.querySelectorAll('section').forEach(section => {
+                    observer.observe(section);
+                });
+            }
+
+            // Enhanced Filter System
+            setupFilters() {
+                // Vehicle filters
+                const searchInput = document.getElementById('search');
+                const priceFilter = document.getElementById('price-filter');
+                const typeFilter = document.getElementById('type-filter');
+
+                if (searchInput) {
+                    searchInput.addEventListener('input', this.debounce(() => this.filterVehicles(), 300));
+                }
+                if (priceFilter) {
+                    priceFilter.addEventListener('change', () => this.filterVehicles());
+                }
+                if (typeFilter) {
+                    typeFilter.addEventListener('change', () => this.filterVehicles());
+                }
+
+                // Gallery filters
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const filter = e.target.getAttribute('data-filter');
+                        this.filterGallery(filter);
+                        
+                        // Update active state
+                        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                        e.target.classList.add('active');
+                    });
+                });
+            }
+
+            // Debounce function for performance
+            debounce(func, wait) {
+                let timeout;
+                return function executedFunction(...args) {
+                    const later = () => {
+                        clearTimeout(timeout);
+                        func(...args);
+                    };
+                    clearTimeout(timeout);
+                    timeout = setTimeout(later, wait);
+                };
+            }
+
+            filterVehicles() {
+                const searchTerm = document.getElementById('search').value.toLowerCase();
+                const priceRange = document.getElementById('price-filter').value;
+                const vehicleType = document.getElementById('type-filter').value;
+
+                document.querySelectorAll('.vehicle-card').forEach(card => {
+                    const title = card.querySelector('h3').textContent.toLowerCase();
+                    const price = parseInt(card.querySelector('.vehicle-price').textContent.replace(/[^0-9]/g, ''));
+                    const type = card.getAttribute('data-type');
+
+                    const matchesSearch = title.includes(searchTerm);
+                    const matchesPrice = this.matchesPriceRange(price, priceRange);
+                    const matchesType = !vehicleType || type === vehicleType;
+
+                    if (matchesSearch && matchesPrice && matchesType) {
+                        card.style.display = 'block';
+                        setTimeout(() => card.style.opacity = '1', 50);
+                    } else {
+                        card.style.opacity = '0';
+                        setTimeout(() => card.style.display = 'none', 300);
+                    }
+                });
+            }
+
+            matchesPriceRange(price, range) {
+                if (!range) return true;
+                
+                switch (range) {
+                    case '0-25000':
+                        return price <= 25000;
+                    case '25000-50000':
+                        return price > 25000 && price <= 50000;
+                    case '50000+':
+                        return price > 50000;
+                    default:
+                        return true;
+                }
+            }
+
+            filterGallery(filter) {
+                document.querySelectorAll('.gallery-item').forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                        setTimeout(() => item.style.opacity = '1', 50);
+                    } else {
+                        item.style.opacity = '0';
+                        setTimeout(() => item.style.display = 'none', 300);
+                    }
+                });
+            }
+
+            // Load featured vehicles
+            loadFeaturedVehicles() {
+                const featuredContainer = document.getElementById('featuredVehicles');
+                if (featuredContainer) {
+                    const featured = vehicles.slice(0, 3);
+                    featuredContainer.innerHTML = featured.map(vehicle => `
+                        <div class="vehicle-card" data-type="${vehicle.type}">
+                            <img src="${vehicle.image}" alt="${vehicle.name}">
+                            <div class="vehicle-info">
+                                <h3>${vehicle.name}</h3>
+                                <div class="vehicle-price">$${vehicle.price.toLocaleString()}</div>
+                                <div class="vehicle-features">
+                                    ${vehicle.features.map(feature => `<span>${feature}</span>`).join('')}
+                                </div>
+                                <p>${vehicle.description}</p>
+                                <button class="btn reserve-btn" data-vehicle="${vehicle.name}" data-price="${vehicle.price}">Reserve Now</button>
+                            </div>
+                        </div>
+                    `).join('');
+
+                    // Add event listeners to reserve buttons
+                    document.querySelectorAll('.reserve-btn').forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            const vehicleName = btn.getAttribute('data-vehicle');
+                            const vehiclePrice = btn.getAttribute('data-price');
+                            this.openReservationModal(vehicleName, vehiclePrice);
+                        });
+                    });
+                }
+            }
+
+            // Load all vehicles
+            loadAllVehicles() {
+                const vehiclesContainer = document.getElementById('vehiclesContainer');
+                if (vehiclesContainer) {
+                    vehiclesContainer.innerHTML = vehicles.map(vehicle => `
+                        <div class="vehicle-card" data-type="${vehicle.type}">
+                            <img src="${vehicle.image}" alt="${vehicle.name}">
+                            <div class="vehicle-info">
+                                <h3>${vehicle.name}</h3>
+                                <div class="vehicle-price">$${vehicle.price.toLocaleString()}</div>
+                                <div class="vehicle-features">
+                                    ${vehicle.features.map(feature => `<span>${feature}</span>`).join('')}
+                                </div>
+                                <p>${vehicle.description}</p>
+                                <button class="btn reserve-btn" data-vehicle="${vehicle.name}" data-price="${vehicle.price}">Reserve Now</button>
+                            </div>
+                        </div>
+                    `).join('');
+
+                    // Add event listeners to reserve buttons
+                    document.querySelectorAll('.reserve-btn').forEach(btn => {
+                        btn.addEventListener('click', () => {
+                            const vehicleName = btn.getAttribute('data-vehicle');
+                            const vehiclePrice = btn.getAttribute('data-price');
+                            this.openReservationModal(vehicleName, vehiclePrice);
+                        });
+                    });
+                }
+            }
+
+            // Payment Methods Setup
+            setupPaymentMethods() {
+                const paymentMethods = document.querySelectorAll('.payment-method');
+                
+                paymentMethods.forEach(method => {
+                    method.addEventListener('click', () => {
+                        // Remove active class from all methods
+                        paymentMethods.forEach(m => m.classList.remove('active'));
+                        
+                        // Add active class to clicked method
+                        method.classList.add('active');
+                        
+                        // Hide all payment details
+                        document.querySelectorAll('.payment-details').forEach(detail => {
+                            detail.classList.remove('active');
+                        });
+                        
+                        // Show selected payment details
+                        const methodType = method.getAttribute('data-method');
+                        document.getElementById(`${methodType}-details`).classList.add('active');
+                    });
+                });
+            }
+
+            // Enhanced Reservation System
+            setupReservationSystem() {
+                const reservationForm = document.getElementById('reservationForm');
+                if (reservationForm) {
+                    reservationForm.addEventListener('submit', async (e) => {
+                        e.preventDefault();
+                        
+                        const formData = new FormData(reservationForm);
+                        const data = Object.fromEntries(formData);
+                        
+                        // Get selected payment method
+                        const selectedMethod = document.querySelector('.payment-method.active');
+                        if (!selectedMethod) {
+                            this.showNotification('Please select a payment method', 'error');
+                            return;
+                        }
+                        
+                        const paymentMethod = selectedMethod.getAttribute('data-method');
+                        data.paymentMethod = paymentMethod;
+                        
+                        // Simulate API call
+                        try {
+                            await this.submitReservation(data);
+                            this.showNotification('Reservation submitted successfully! We will contact you shortly.', 'success');
+                            reservationForm.reset();
+                            
+                            // Reset payment methods
+                            document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('active'));
+                            document.querySelectorAll('.payment-details').forEach(d => d.classList.remove('active'));
+                        } catch (error) {
+                            this.showNotification('Error submitting reservation. Please try again.', 'error');
+                        }
+                    });
+                }
+            }
+
+            async submitReservation(data) {
+                // Simulate API call
+                return new Promise((resolve) => {
+                    setTimeout(() => {
+                        console.log('Reservation data:', data);
+                        resolve({ success: true });
+                    }, 1000);
+                });
+            }
+
+            openReservationModal(vehicleName, vehiclePrice) {
+                const modal = this.createReservationModal(vehicleName, vehiclePrice);
+                document.body.appendChild(modal);
+            }
+
+            createReservationModal(vehicleName, vehiclePrice) {
+                const modal = document.createElement('div');
+                modal.className = 'modal';
+                modal.innerHTML = `
+                    <div class="modal-content">
+                        <span class="close-modal">&times;</span>
+                        <h3>Reserve: ${vehicleName}</h3>
+                        <p class="vehicle-price">Price: $${parseInt(vehiclePrice).toLocaleString()}</p>
+                        <form id="quickReserveForm">
+                            <input type="hidden" name="vehicle" value="${vehicleName}">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" placeholder="Phone" required>
+                            </div>
+                            <div class="form-group">
+                                <select name="paymentMethod" required>
+                                    <option value="">Select Payment Method</option>
+                                    <option value="mpesa">M-Pesa</option>
+                                    <option value="airtel">Airtel Money</option>
+                                    <option value="bank">Bank Transfer</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn">Confirm Reservation</button>
+                        </form>
+                    </div>
+                `;
+
+                modal.querySelector('.close-modal').addEventListener('click', () => modal.remove());
+                modal.querySelector('form').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.submitReservation(new FormData(e.target));
+                    modal.remove();
+                });
+
+                return modal;
+            }
+
+            // Chatbot Setup
+            setupChatbot() {
+                const chatbotButton = document.getElementById('chatbotButton');
+                const chatbotWindow = document.getElementById('chatbotWindow');
+                const closeChatbot = document.getElementById('closeChatbot');
+                const sendMessageButton = document.getElementById('sendMessage');
+                const chatbotInput = document.getElementById('chatbotInput');
+                const chatbotMessages = document.getElementById('chatbotMessages');
+                const quickQuestions = document.querySelectorAll('.quick-question');
+
+                // Toggle chatbot window
+                chatbotButton.addEventListener('click', () => {
+                    chatbotWindow.classList.toggle('active');
+                });
+
+                // Close chatbot
+                closeChatbot.addEventListener('click', () => {
+                    chatbotWindow.classList.remove('active');
+                });
+
+                // Send message function
+                const sendMessage = () => {
+                    const message = chatbotInput.value.trim();
+                    if (message) {
+                        this.addMessageToChat(message, 'user');
+                        chatbotInput.value = '';
+                        
+                        // Simulate bot response
+                        setTimeout(() => {
+                            this.generateBotResponse(message);
+                        }, 1000);
+                    }
+                };
+
+                // Send message on button click
+                sendMessageButton.addEventListener('click', sendMessage);
+
+                // Send message on Enter key
+                chatbotInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        sendMessage();
+                    }
+                });
+
+                // Quick question buttons
+                quickQuestions.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const question = button.getAttribute('data-question');
+                        this.handleQuickQuestion(question);
+                    });
+                });
+            }
+
+            addMessageToChat(message, sender) {
+                const chatbotMessages = document.getElementById('chatbotMessages');
+                const messageElement = document.createElement('div');
+                messageElement.className = `message ${sender}`;
+                messageElement.textContent = message;
+                chatbotMessages.appendChild(messageElement);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+
+            handleQuickQuestion(questionType) {
+                let response = '';
+                
+                switch(questionType) {
+                    case 'vehicle-pricing':
+                        response = 'Our vehicles range from $40,000 to $120,000 depending on the model and features. Would you like information about a specific vehicle?';
+                        break;
+                    case 'test-drive':
+                        response = 'You can schedule a test drive by filling out the reservation form on our website or calling us at (555) 123-4567. What vehicle are you interested in testing?';
+                        break;
+                    case 'financing':
+                        response = 'We offer various financing options with competitive rates. Our terms range from 24 to 72 months. Would you like to speak with our financing department?';
+                        break;
+                    case 'service':
+                        response = 'We provide comprehensive service and maintenance packages for all our vehicles. Our service center is open Monday to Saturday from 8 AM to 6 PM.';
+                        break;
+                    default:
+                        response = 'How can I assist you with that?';
+                }
+                
+                this.addMessageToChat(response, 'bot');
+            }
+
+            generateBotResponse(userMessage) {
+                const lowerMessage = userMessage.toLowerCase();
+                let response = '';
+
+                if (lowerMessage.includes('price') || lowerMessage.includes('cost')) {
+                    response = 'Our vehicles range from $40,000 to $120,000. Are you looking for a specific type of vehicle?';
+                } else if (lowerMessage.includes('test drive') || lowerMessage.includes('drive')) {
+                    response = 'You can schedule a test drive through our website or by calling us. What day works best for you?';
+                } else if (lowerMessage.includes('finance') || lowerMessage.includes('payment') || lowerMessage.includes('loan')) {
+                    response = 'We offer flexible financing options with competitive rates. Our team can help you find the best payment plan.';
+                } else if (lowerMessage.includes('hours') || lowerMessage.includes('open') || lowerMessage.includes('time')) {
+                    response = 'We\'re open Monday to Friday 9 AM - 8 PM, Saturday 9 AM - 6 PM, and Sunday 10 AM - 4 PM.';
+                } else if (lowerMessage.includes('contact') || lowerMessage.includes('phone') || lowerMessage.includes('number')) {
+                    response = 'You can reach us at (555) 123-4567 or email info@premiumauto.com. Our team is ready to assist you!';
+                } else if (lowerMessage.includes('thank') || lowerMessage.includes('thanks')) {
+                    response = 'You\'re welcome! Is there anything else I can help you with?';
+                } else {
+                    response = 'I understand you\'re asking about: "' + userMessage + '". Our customer service team can provide more detailed assistance. Would you like me to connect you with them?';
+                }
+
+                this.addMessageToChat(response, 'bot');
+            }
+
+            // SEO Optimization
+            setupSEO() {
+                // Lazy loading images
+                this.setupLazyLoading();
+                
+                // Structured data
+                this.addStructuredData();
+            }
+
+            setupLazyLoading() {
+                const imageObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.classList.remove('lazy');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+
+                document.querySelectorAll('img[data-src]').forEach(img => {
+                    imageObserver.observe(img);
+                });
+            }
+
+            addStructuredData() {
+                const structuredData = {
+                    "@context": "https://schema.org",
+                    "@type": "CarDealer",
+                    "name": "Premium Auto",
+                    "description": "Premium car dealership offering luxury and premium vehicles with exceptional customer service.",
+                    "url": window.location.href,
+                    "telephone": "+1-555-123-4567",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "123 Auto Lane",
+                        "addressLocality": "Car City",
+                        "addressRegion": "State",
+                        "postalCode": "12345",
+                        "addressCountry": "US"
+                    }
+                };
+
+                const script = document.createElement('script');
+                script.type = 'application/ld+json';
+                script.text = JSON.stringify(structuredData);
+                document.head.appendChild(script);
+            }
+
+            // Promotional Banners
+            setupPromotionalBanners() {
+                this.rotateBanners();
+            }
+
+            rotateBanners() {
+                const banners = [
+                    {
+                        title: "Year-End Clearance",
+                        subtitle: "Save up to 20% on select models",
+                        cta: "Shop Now",
+                        theme: "secondary"
+                    },
+                    {
+                        title: "Financing Special",
+                        subtitle: "0% APR for qualified buyers",
+                        cta: "Learn More",
+                        theme: "primary"
+                    },
+                    {
+                        title: "Test Drive Event",
+                        subtitle: "Schedule your test drive this weekend",
+                        cta: "Book Now",
+                        theme: "secondary"
+                    }
+                ];
+
+                let currentBanner = 0;
+                const bannerElement = document.getElementById('promoBanner');
+                
+                setInterval(() => {
+                    this.updateBanner(banners[currentBanner], bannerElement);
+                    currentBanner = (currentBanner + 1) % banners.length;
+                }, 5000);
+            }
+
+            updateBanner(banner, bannerElement) {
+                if (bannerElement) {
+                    bannerElement.innerHTML = `
+                        <div class="promo-content">
+                            <h3>${banner.title}</h3>
+                            <p>${banner.subtitle}</p>
+                            <button class="btn">${banner.cta}</button>
+                        </div>
+                    `;
+                }
+            }
+
+            // Notification System
+            showNotification(message, type = 'info') {
+                const notification = document.createElement('div');
+                notification.className = `notification notification-${type}`;
+                notification.textContent = message;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 100);
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => notification.remove(), 300);
+                }, 3000);
+            }
+        }
+
+        // Initialize the dealership when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new PremiumAutoDealership();
+        });
+    </script>
+</body>
+</html>
